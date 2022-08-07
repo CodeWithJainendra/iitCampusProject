@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    tools:context=".InToScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coffieid"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/coffieback"
+        android:gravity="top|center">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/coffiemug"
+            android:layout_gravity="center"
+            android:padding="50dp"
+            android:layout_height="250dp"
+            android:src="@drawable/coffeepicc"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/thermostext"
+        app:layout_constraintTop_toBottomOf="@id/coffieid"
+        android:padding="50dp"
+        android:gravity="center"
+        android:text="THERMOS"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/theway"
+        app:layout_constraintTop_toBottomOf="@id/thermostext"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:text="The Way You Love , The Way We Serve"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp">
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coffietext"
+            android:text="@string/introtype"
+            android:paddingLeft="10dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:padding="10dp"
+        android:text="Get Started"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

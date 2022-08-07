@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <item
+     android:id="@+id/nav_home"
+     android:title="Dashboard"
+     android:icon="@drawable/ic_dash"
+     android:iconTint="@color/white"
+     app:cnb_backgroundColor="@color/colorPrimaryDark"/>
+
+    <item
+        android:id="@+id/nav_category"
+        android:title="Categories"
+        android:icon="@drawable/ic_category"
+        app:cnb_backgroundColor="@color/colorPrimary"/>
+
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"
+        app:cnb_backgroundColor="@color/colorPrimary"/>
+
+</menu>

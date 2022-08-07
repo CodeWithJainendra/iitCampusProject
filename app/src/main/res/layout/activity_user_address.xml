@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background"
+    tools:context=".User.User_Address_Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/address_bottom" />
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+
+        <TextView
+            android:id="@+id/titileTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:text="Shipping Address"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/gpsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_gps"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/radio_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="Address Main" />
+
+
+            <LinearLayout
+                android:id="@+id/linaer"
+                android:layout_below="@id/radio_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/current_main_address"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Current Gps Address"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+
+
+                <ImageButton
+                    android:id="@+id/maingpsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gps"
+                    android:padding="10dp"
+                    app:tint="@color/col_red"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+            </LinearLayout>
+
+
+
+
+            <RadioButton
+                android:id="@+id/radio_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linaer"
+                android:layout_marginHorizontal="10dp"
+                android:text="Address Second" />
+
+            <EditText
+                android:id="@+id/address_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_second"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Type Your Second Address"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_second"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background"
+                android:padding="10dp"
+                android:text="Update"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_below="@id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:elevation="200dp"
+                android:foregroundGravity="center"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Main Address (Current Location)"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_radio_uncheck"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/col_red"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/show_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Address"/>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1"
+                android:layout_below="@id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="200dp"
+                android:foregroundGravity="center"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Second Address"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_radio_uncheck"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/success"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/show_address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Address"/>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/cardview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="200dp"
+                android:foregroundGravity="center"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/default_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Default Shpping Address : Choose One"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_radio_uncheck"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:padding="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/mainbtn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Main Address"/>
+
+                        <RadioButton
+                            android:id="@+id/secondbtn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Second Address"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/text"-->
+            <!--                android:layout_below="@id/cardview1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_marginHorizontal="10dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:text="Default Address :"/>-->
+            <!--            -->
+            <!--            <LinearLayout-->
+            <!--                android:layout_below="@id/text"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="10dp"-->
+            <!--                android:orientation="horizontal">-->
+            <!--         -->
+            <!--                -->
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Main Address"/>-->
+
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Second Address"/>-->
+            <!--                -->
+            <!--            </LinearLayout>-->
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

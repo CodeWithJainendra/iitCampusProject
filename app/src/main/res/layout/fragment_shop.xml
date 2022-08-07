@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Seller.User.ShopFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/near_shops"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Near Shops"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/all_shops"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="All Shops"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/filterbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_filter"
+                app:tint="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/emptyLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/noCityIv"
+                android:layout_width="344.54dp"
+                android:layout_height="282.87dp"
+                android:src="@drawable/nocity"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Near Shops Around You. \nDiscover All Shops"
+                android:textAlignment="center"
+                android:textSize="15sp"/>
+
+
+        </LinearLayout>
+        
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linear"
+            tools:listitem="@layout/show_shops" />
+    </RelativeLayout>
+
+</FrameLayout>

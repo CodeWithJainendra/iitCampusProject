@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Seller.User.CartFragment">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order To"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:text="Order To"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/user_nameTv"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/emptyLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_nameTv"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/noOrderIv"
+                android:layout_width="344.54dp"
+                android:layout_height="282.87dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/noorder" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No orders have been placed yet. \nDiscover and order now"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_above="@id/view"
+            android:layout_below="@id/view1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_cart_item_activity" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/pricesLayout"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimaryDark" />
+
+
+        <RelativeLayout
+            android:id="@+id/pricesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/success"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sTotalLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Sub Total:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/sTotalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:text="Rs.00"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/totalLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sTotalTv"
+                android:padding="5dp"
+                android:text="Total Price:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/totalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sTotalTv"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:text="Rs.00"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/userAddressTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/totalLabelTv"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Default Address :"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/userAddressTv1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/totalLabelTv"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:text="Rs.00"-->
+<!--                android:textAlignment="viewStart"-->
+<!--                android:layout_toEndOf="@id/userAddressTv"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

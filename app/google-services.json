@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "738723184931",
+    "firebase_url": "https://iit-campus-default-rtdb.firebaseio.com",
+    "project_id": "iit-campus",
+    "storage_bucket": "iit-campus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738723184931:android:3cc19d2151741676b30c96",
+        "android_client_info": {
+          "package_name": "com.example.quiztutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738723184931-oe0oi57phu6ivilsbb9gl5np5asb57fi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quiztutorial",
+            "certificate_hash": "565d1960f203448c52670e4d6e62cb9069e5920f"
+          }
+        },
+        {
+          "client_id": "738723184931-2r6ctm05r7ip26tj639jcstc7lmqvjfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMjP-iE6HbH7-o8WA5yvI18Nk90CtNn00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738723184931-2r6ctm05r7ip26tj639jcstc7lmqvjfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738723184931:android:f666ae4d6bee4a44b30c96",
+        "android_client_info": {
+          "package_name": "com.shivam.iitcampus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738723184931-egvq7qhoi134tnjvk1m2fcujfamusimg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shivam.iitcampus",
+            "certificate_hash": "565d1960f203448c52670e4d6e62cb9069e5920f"
+          }
+        },
+        {
+          "client_id": "738723184931-2r6ctm05r7ip26tj639jcstc7lmqvjfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMjP-iE6HbH7-o8WA5yvI18Nk90CtNn00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738723184931-2r6ctm05r7ip26tj639jcstc7lmqvjfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738723184931:android:3fe1009bc92a127bb30c96",
+        "android_client_info": {
+          "package_name": "com.shivam.iitcampusproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738723184931-2r6ctm05r7ip26tj639jcstc7lmqvjfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMjP-iE6HbH7-o8WA5yvI18Nk90CtNn00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738723184931-2r6ctm05r7ip26tj639jcstc7lmqvjfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

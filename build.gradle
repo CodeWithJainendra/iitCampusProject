@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter()
+    }
+
+    ext
+            {
+                compose_version = '1.0.5'
+                defAndroidXCoreVersion = '1.6.0'
+                defAndroidAnnotationVersion = '1.2.0'
+                defAppCompatVersion = '1.3.0'
+                defMaterialVersion = '1.4.0'
+                defCompileSdkVersion = 30
+                defMinSdkVersion = 14
+
+
+                dependencies {
+                    classpath "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
+                    classpath 'com.android.tools.build:gradle:7.2.1'
+                    classpath 'com.android.tools.build:gradle:7.0.4'
+                    classpath 'com.google.gms:google-services:4.3.10'
+                    classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.1'
+
+
+
+
+
+                }
+            }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.13'
+    }
+}
+
+// Top-l// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

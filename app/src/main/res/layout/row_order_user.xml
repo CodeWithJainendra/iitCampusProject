@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:elevation="200dp"
+    android:id="@+id/cardView"
+    android:foregroundGravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="200dp">
+
+    <RelativeLayout
+        android:id="@+id/mainRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/backgroundIv"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp" />
+
+
+        <TextView
+            android:id="@+id/orderTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Order: 12345"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/nextIv"
+            android:text="21/04/2021" />
+
+        <TextView
+            android:id="@+id/shopNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateTv"
+            android:layout_marginStart="10dp"
+            android:text="ABC Shops"
+            android:textColor="@color/background2_startcolor" />
+
+
+        <TextView
+            android:id="@+id/amountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopNameTv"
+            android:layout_marginStart="10dp"
+            android:text="Total Amount: Rs.1500" />
+
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopNameTv"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/nextIv"
+            android:text="Loading"
+            android:textStyle="bold"
+            android:textColor="@color/success" />
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_next" />
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

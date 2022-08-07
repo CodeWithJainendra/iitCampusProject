@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Seller.User.UserHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableTint="@color/sky_blue"
+            android:drawablePadding="16dp"
+            android:textColor="@color/black"
+            android:ems="10"
+            android:hint="Search your products"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColorHint="#474749"
+            android:textSize="15sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/sliderRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/slideRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="50dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="13dp"
+                        app:cardMaxElevation="20dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <TextView
+                            android:id="@+id/loadingTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loading...."
+                            android:gravity="center"
+                            android:textColor="@color/pink"
+                            android:layout_gravity="center"
+                            android:visibility="gone"/>
+
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            app:auto_cycle="true"
+                            app:corner_radius="50"
+                            app:delay="0"
+                            app:error_image="@color/white"
+                            app:period="4000"
+                            app:placeholder="@color/home_background" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/slideRL"
+                    android:layout_marginHorizontal="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/allProductsBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/all" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="All"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/beveragesBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/beverages" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Beverages"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/bakeryBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/bakery" />
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Bakery Food"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/chilledBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/chilled" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Chilled"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <!--                </com.google.android.material.card.MaterialCardView>-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/meatsBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/meat" />
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Meats"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/groceryBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/grocery" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Grocery"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/homewareBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/homeware" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="HomeWare"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/medicineBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/medicine" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Medicine"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/petcareBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/pet" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Pet Care"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <!--                <com.google.android.material.card.MaterialCardView-->
+                        <!--                    android:id="@+id/vegetablesBtn"-->
+                        <!--                    android:layout_width="100dp"-->
+                        <!--                    android:layout_height="100dp"-->
+                        <!--                    android:layout_margin="8dp"-->
+                        <!--                    android:checkable="true"-->
+                        <!--                    android:clickable="true"-->
+                        <!--                    android:focusable="true"-->
+                        <!--                    app:cardCornerRadius="15dp">-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/vegetablesBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/vegetables" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Vegetables"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <!--                </com.google.android.material.card.MaterialCardView>-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/fruitsBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/fruit" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Fruits"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/craftBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/crafts" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Crafts"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/clothesBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/clothes" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Clothes"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+                            <ImageView
+                                android:id="@+id/foodBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/food" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Food"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/othersBtn"
+                                android:layout_width="56dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="string/content_description_media"
+                                android:padding="10dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/others" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Others"
+                                android:textAlignment="center"
+                                android:textColor="#474749"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:id="@+id/categoryTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/scrollview"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Showing All Category"
+                    android:textColor="#474749"
+                    android:textSize="11dp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/categoryTv"
+                    android:layout_marginBottom="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/row_user_home_products" />
+
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminHomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/logoutBtn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome Admin ,"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sellerReqBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="100dp"
+                    android:layout_marginTop="5dp"
+                    android:foregroundGravity="center"
+                    app:cardCornerRadius="21dp"
+                    app:cardBackgroundColor="#F9BEAD"
+                    app:cardMaxElevation="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp"
+                            android:src="@drawable/ic_check"
+                            app:tint = "#D14937"/>
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toEndOf="@id/image"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Seller Requests"
+
+                            android:textAlignment="center"
+                            android:textColor="#D14937"
+                            android:textSize="24sp" />
+
+                    </RelativeLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sellerAddImageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="100dp"
+                    android:layout_marginTop="5dp"
+                    android:foregroundGravity="center"
+                    app:cardCornerRadius="21dp"
+                    app:cardBackgroundColor="#FBD96D"
+                    app:cardMaxElevation="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp"
+                            android:src="@drawable/slider"
+                            app:tint="#D14937" />
+
+                        <TextView
+                            android:id="@+id/text12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toEndOf="@id/image1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Sliding Images"
+                            android:textAlignment="center"
+                            android:textColor="#D14937"
+                            android:textSize="24sp" />
+
+                    </RelativeLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_baseline_power_settings_new_24"
+        app:tint="@color/white" />
+
+</RelativeLayout>

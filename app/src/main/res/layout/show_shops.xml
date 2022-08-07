@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    android:elevation="100dp"
+    android:foregroundGravity="center"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="100dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/backgroundColorRIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradient_bg2"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/shop_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="1dp" />
+
+        <ImageView
+            android:id="@+id/online"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/online_shape" />
+
+        <TextView
+            android:id="@+id/shopClosed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/next"
+            android:background="@drawable/shop_colsed"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Closed"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/next"
+            android:layout_toEndOf="@id/shop_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Shop Name"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/discount_shape"
+                    android:padding="5dp"
+                    android:text="Colombo"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:numStars="5"
+                    android:progressTint="@color/fis2" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_next" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

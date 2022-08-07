@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shivam.iitcampusproject">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher_new_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.IitCampusProject">
+        <activity
+            android:name="com.shivam.iitcampusproject.admin.adminAddBannersActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.SellerShowQuestionsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.admin.SellerRequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.admin.AdminHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.InToScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.WelcomeActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.SellerNotificationsActivity"
+            android:exported="false" />
+
+        <service
+            android:name="com.shivam.iitcampusproject.MyFirebaseMessaging"
+            android:exported="false"
+            android:permission="TODO"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.shivam.iitcampusproject.User.UserNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.User.Show_one_product_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.Seller_Show_Order_Details_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.SellerShowOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.User.User_Show_Order_Details_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.User.User_Address_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.User.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.User.Show_Shop_Products_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.Seller_Profile_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.Seller_Show_Products_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.Seller_Edit_Products_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.Seller_add_Product_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.Seller.SellerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.User.UserHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.SellerRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.UserRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shivam.iitcampusproject.SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shivam.iitcampusproject.MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

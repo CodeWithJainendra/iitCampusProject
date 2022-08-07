@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Seller.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Buyer_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="100dp"
+                    android:foregroundGravity="center"
+                    app:cardBackgroundColor="@color/all_background"
+                    app:cardCornerRadius="10dp"
+                    app:cardMaxElevation="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileSettingIv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:src="@drawable/user_profiles"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/profileSettingIv"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Profile Setting" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notificationsCv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Buyer_profile"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="100dp"
+                    android:foregroundGravity="center"
+                    app:cardBackgroundColor="@color/all_background"
+                    app:cardCornerRadius="10dp"
+                    app:cardMaxElevation="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/notificationIv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:src="@drawable/notify"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/notificationIv"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Notifications" />
+
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationsCv"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="100dp"
+                    android:foregroundGravity="center"
+                    app:cardBackgroundColor="@color/all_background"
+                    app:cardCornerRadius="10dp"
+                    app:cardMaxElevation="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logoutIv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:src="@drawable/power"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/logoutIv"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Logout" />
+
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

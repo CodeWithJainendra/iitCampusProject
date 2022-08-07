@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Seller.User.SettingsUserFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+              <androidx.cardview.widget.CardView
+                  android:id="@+id/profileSettingCv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="10dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="5dp"
+                  android:elevation="100dp"
+                  android:foregroundGravity="center"
+                  app:cardBackgroundColor="@color/all_background"
+                  app:cardCornerRadius="10dp"
+                  app:cardMaxElevation="100dp">
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="5dp">
+
+
+                      <de.hdodenhof.circleimageview.CircleImageView
+                          android:id="@+id/profileSettingIv"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:padding="5dp"
+                          android:src="@drawable/user_profiles"
+                          app:civ_border_color="@color/white"
+                          app:civ_border_width="2dp" />
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_toEndOf="@id/profileSettingIv"
+                          android:text="Profile Setting"
+                          android:layout_centerVertical="true"
+                          android:fontFamily="sans-serif-black"
+                          android:layout_marginStart="10dp"/>
+
+
+                  </RelativeLayout>
+
+              </androidx.cardview.widget.CardView>
+
+              <androidx.cardview.widget.CardView
+                  android:id="@+id/ShippingCv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="10dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="5dp"
+                  android:elevation="100dp"
+                  android:foregroundGravity="center"
+                  app:cardBackgroundColor="@color/all_background"
+                  app:cardCornerRadius="10dp"
+                  app:cardMaxElevation="100dp">
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="5dp">
+
+
+                      <de.hdodenhof.circleimageview.CircleImageView
+                          android:id="@+id/Shipping"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:padding="5dp"
+                          android:src="@drawable/shipping"
+                          app:civ_border_color="@color/white"
+                          app:civ_border_width="2dp" />
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_toEndOf="@id/Shipping"
+                          android:fontFamily="sans-serif-black"
+                          android:text="Shipping Address" />
+
+
+                  </RelativeLayout>
+
+
+
+              </androidx.cardview.widget.CardView>
+
+              <androidx.cardview.widget.CardView
+                  android:id="@+id/notificationsCv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="10dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="5dp"
+                  android:elevation="100dp"
+                  android:foregroundGravity="center"
+                  app:cardBackgroundColor="@color/all_background"
+                  app:cardCornerRadius="10dp"
+                  app:cardMaxElevation="100dp">
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="5dp">
+
+
+                      <de.hdodenhof.circleimageview.CircleImageView
+                          android:id="@+id/notificationIv"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:padding="5dp"
+                          android:src="@drawable/notify"
+                          app:civ_border_color="@color/white"
+                          app:civ_border_width="2dp" />
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_toEndOf="@id/notificationIv"
+                          android:fontFamily="sans-serif-black"
+                          android:text="Notifications" />
+
+
+                  </RelativeLayout>
+
+
+
+              </androidx.cardview.widget.CardView>
+
+          </LinearLayout>
+
+
+
+
+
+      </ScrollView>
+
+
+  </RelativeLayout>
+
+</FrameLayout>

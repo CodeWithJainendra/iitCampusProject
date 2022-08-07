@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_into_sreen" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Fly Shopping"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textTagLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextTitle"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="@string/into_dec"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/getStartedBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textTagLine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_signup_btn"
+                android:padding="10dp"
+                android:text="Get Started"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
